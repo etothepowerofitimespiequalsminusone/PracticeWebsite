@@ -1,0 +1,55 @@
+/* 
+    Created on : Aug 3, 2016, 2:26:01 PM
+    Author     : Laganovskis
+*/
+
+/* 
+    Created on : Jul 26, 2016, 6:34:38 PM
+    Author     : Laganovskis
+*/
+/* null margins and padding to give good cross-browser baseline */
+html,body,address,blockquote,div,
+form,fieldset,caption,
+h1,h2,h3,h4,h5,h6,
+hr,ul,li,ol,ul,
+table,tr,td,th,p,img {
+	margin:0;
+	padding:0;
+}
+
+img, fieldset {
+	border:none;
+}
+
+hr {
+	display:none;
+	/*
+		HR in my code are for semantic breaks in topic/section, NOT
+		style/presenation, so hide them from screen.css users
+	*/
+}
+
+/* fix for legacy iOS and windows Mobile devices */
+@media (max-width:512px) {
+	* {
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none;
+	}
+}
+
+/* fix for HDX displays like the Kindle Fire HDX */
+@media
+	(-webkit-min-device-pixel-ratio:2) and (min-width:1600px), 
+	(min-resolution:172dpi) and (min-width:1600px)
+{
+	html { font-size:200%; }
+}
+
+
+
+.one-third{
+    width:30%;
+    float:left;
+    margin-right: 3%;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta
+	name="viewport"
+	content="width=device-width,height-device-height,initial-scale=1"
+>
+<link
+	rel="stylesheet"
+	href="animations.css"
+	media="screen,projection,tv"
+>
+<script src="osc.js">
+    function O(obj)
+{
+    if(typeof obj == 'object') return obj;
+    else return document.getElementById(obj);
+}
+
+function S(obj)
+{
+    return O('obj').style;
+}
+
+function C(name)
+{
+    var elements = document.getElementByTagName('*');
+    var objects = [];
+    
+    for(var i = 0; i< elements.length; ++i)
+    {
+        objects.push(elements[i]);
+    }
+    
+    return objects;
+}
+</script>
+<title>title</title>
+    </head><body>
+        <div id="box"></div>
+        <script>
+            SIZE = LEFT = 0;
+            setInterval(animate, 30);
+            
+            function animate()
+            {
+                SIZE += 10;
+                LEFT += 3;
+                
+                if(SIZE == 200) SIZE = 0;
+                if(LEFT == 600) LEFT = 0;
+                S('box').width = SIZE + 'px';
+                S('box').height = SIZE + 'px';
+                S('box').left = LEFT + 'px';
+            }
+        </script>
+    </body></html>

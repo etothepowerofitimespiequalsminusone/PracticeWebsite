@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+<meta
+	name="viewport"
+	content="width=device-width,height-device-height,initial-scale=1"
+>
+<link
+	rel="stylesheet"
+	href="styleAbout.css"
+	media="screen,projection,tv"
+>
+<script type="text/javascript" src="aboutScript.js"></script>
+
+   </head>
+       <body> 
+           <div id="header">
+               <h1>this page contains layout examples</h1>
+               <p>this one has a problem that I cannot not put margin-rigth on the main div</p>
+           </div>
+                <ul id="mainNav">
+                    <li><a href="index.html">Hello etothepowerofpi</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul> 
+           <div id="main">
+                <div id="leftColumn">Nirvana was an American rock band formed by singer and guitarist Kurt Cobain and bassist Krist Novoselic in Aberdeen, Washington, in 1987. Nirvana went through a succession of drummers, the longest-lasting being Dave Grohl, who joined the band in 1990. Despite releasing only three full-length studio albums in their seven-year career, Nirvana has come to be regarded as one of the most influential and important rock bands of the modern era. Though the band dissolved in 1994, their music continues to maintain a popular following and to inspire and influence modern rock and roll culture.
+                    <ul>
+                    <li><a href="index.html">Hello etothepowerofpi</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul> 
+                </div>
+                <div id="centerColumn">In the late 1980s, Nirvana established itself as part of the Seattle grunge scene, releasing its first album, Bleach, for the independent record label Sub Pop in 1989. The band eventually came to develop a sound that relied on dynamic contrasts, often between quiet verses and loud, heavy choruses. After signing to major label DGC Records, Nirvana found unexpected success with "Smells Like Teen Spirit", the first single from the band's second album Nevermind (1991). Nirvana's sudden success widely popularized alternative rock as a whole, and the band's frontman Cobain found himself referred to in the media as the "spokesman of a generation", with Nirvana being considered the "flagship band" of Generation X.[1] In response, Nirvana's third studio album, In Utero (1993), released to critical acclaim, featured an abrasive, less mainstream sound and challenged the group's audience.</div>  
+                <div id="rightColumn">Nirvana's active career ended following the death of Kurt Cobain in 1994, but various posthumous releases have been issued since, overseen by Novoselic, Grohl, and Cobain's widow Courtney Love. Since its debut, the band has sold over 25 million records in the United States alone, and over 75 million records worldwide, making them one of the best-selling bands of all time.[2][3] Nirvana was inducted into the Rock and Roll Hall of Fame in 2014, in its first year of eligibility.</div>      
+                    
+           </div>
+           <div id="footer">
+                    this is the footer
+           </div>
+           
+           <canvas></canvas>
+           <script>
+        
+var canvas = document.querySelector('canvas'),
+    ctx = canvas.getContext('2d');
+
+var resize = function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
+
+window.addEventListener('resize', resize);
+
+window.addEventListener('load', function () {
+
+  resize();
+
+  var pos, vel;
+  pos = {
+    x: 10,
+    y: 10
+  };
+  vel = {
+    x: 1,
+    y: 1
+  };
+/*
+  var loop = function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pos.x += vel.x;
+    pos.y += vel.y;
+    if (pos.x < 5 || pos.x > canvas.width - 5) {
+      vel.x *= -1;
+    }
+    if (pos.y < 5 || pos.y > canvas.height - 5) {
+      vel.y *= -1;
+    }
+    ctx.fillRect(pos.x - 5, pos.y - 5, 10, 10);
+  };
+
+  setInterval(loop, 1000 / 60);
+  */
+ var loop = function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pos.x += vel.x;
+    pos.y += vel.y;
+    if (pos.x < 5 || pos.x > canvas.width - 5) {
+      vel.x *= -1;
+    }
+    if (pos.y < 5 || pos.y > canvas.height - 5) {
+      vel.y *= -1;
+    }
+    ctx.fillRect(pos.x - 5, pos.y - 5, 10, 10);
+  };
+
+  setInterval(loop, 1000 / 60);
+});
+
+         
+           </script>
+       </body>
+</html>

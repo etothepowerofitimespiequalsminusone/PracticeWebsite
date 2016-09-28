@@ -1,0 +1,129 @@
+/* null margins and padding to give good cross-browser baseline */
+html,body,address,blockquote,div,
+form,fieldset,caption,
+h1,h2,h3,h4,h5,h6,
+hr,ul,li,ol,ul,
+table,tr,td,th,p,img {
+	margin:0;
+	padding:0;
+}
+
+img, fieldset {
+	border:none;
+}
+
+hr {
+	display:none;
+	/*
+		HR in my code are for semantic breaks in topic/section, NOT
+		style/presenation, so hide them from screen.css users
+	*/
+}
+
+/* fix for legacy iOS and windows Mobile devices */
+@media (max-width:512px) {
+	* {
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none;
+	}
+}
+
+/* fix for HDX displays like the Kindle Fire HDX */
+@media
+	(-webkit-min-device-pixel-ratio:2) and (min-width:1600px), 
+	(min-resolution:172dpi) and (min-width:1600px)
+{
+	html { font-size:200%; }
+}
+
+
+/** this is the main part of the page **/
+
+a img{
+
+}
+body{
+    background: #212121;
+}
+
+/* main nav */
+.main-nav{
+    background: black;
+    margin:0 5em;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color:#bfbfbf;
+}
+
+.main-nav li:hover > a{
+    color:white;  
+    font-weight:200;
+    text-shadow: 0px 0.01em white;
+}
+
+
+.main-nav ul{
+    padding: 1em;
+    background-color: black;
+    overflow: hidden;
+    text-align: center;
+    margin:0;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+}
+ul li a img{
+    width: 50px;
+    height: 50px;
+}
+ul li{
+    padding: 1em 0.2em 1em 0.2em;
+    height: inherit;
+    display: inline-block;
+
+}
+ul li:first-child{
+    border: none
+}
+.logo{
+    /*background: url(http://www.openclipart.org/people/lemmling/lemmling_Ladybug.svg) no-repeat 6px center;
+    padding: 1em;
+    height: inherit;*/
+    list-style-type: none;
+    padding-left: 4.1em;
+    background-image: url('http://blogs.agu.org/wildwildscience/files/2015/03/images.png');
+    background-size: 4.1em;
+    background-repeat: no-repeat;
+}
+
+/* submenu */
+.main-nav li ul {
+	position: absolute;
+	left: -999em;
+}
+.main-nav li:hover ul {
+	left: auto;
+}
+
+.sub-menu li{
+    display: block;
+    padding: 0 0.5em 0.5em 0;
+    margin-left: 0;
+}
+
+/* content */
+
+#content{
+    margin: 1em 5em;
+    border: 1px solid black;
+}
+
+footer{
+    margin: 1em 5em;
+    text-align: center;
+    border: 1px solid black;
+}

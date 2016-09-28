@@ -1,0 +1,29 @@
+body{
+    background:#000;
+}
+#nav li{
+    display:inline;
+    
+}
+#nav a{
+    padding: 0.4em;
+    text-decoration: none;
+    color: #FFF;
+    border:1px solid white;
+    border-radius: 4px;
+}
+#nav a:hover, a:active,a:focus {
+    background: #CCC;
+    color: #555;
+}
+#face {
+    text-align: center;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Calibri, sans-serif;
+    font-size: 20em;
+    color: white;
+    background-color: black;
+    border:1px solid white;
+}

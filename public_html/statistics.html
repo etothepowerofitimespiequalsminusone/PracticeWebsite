@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta
+	name="viewport"
+	content="width=device-width,height-device-height,initial-scale=1"
+>
+<link
+	rel="stylesheet"
+	href="statistics.css"
+	media="screen,projection,tv"
+>
+<script src="osc.js">
+    function O(obj)
+{
+    if(typeof obj == 'object') return obj;
+    else return document.getElementById(obj);
+}
+
+function S(obj)
+{
+    return O('obj').style;
+}
+
+function C(name)
+{
+    var elements = document.getElementByTagName('*');
+    var objects = [];
+    
+    for(var i = 0; i< elements.length; ++i)
+    {
+        objects.push(elements[i]);
+    }
+    
+    return objects;
+}
+
+</script>
+<title>etothepowerofpiequalsminusone</title>
+    </head><body>
+    
+            <p>this is going to be the place where statistical analysis happens</p>
+            <img src="http://www.sra.gov.ph/wp-content/uploads/2012/09/Historical-Statistics2.jpg" alt="statistics">
+               
+            <script>
+                                /*
+                    alert('click ok to add an element');
+                    
+                    para = document.createElement('p');
+                    document.body.appendChild(para);
+                    para.innerHTML = 'this is inserted paragraph';
+                    
+                    newdiv = document.createElement('div');
+                    newdiv.id = 'newDiv';
+                    document.body.appendChild(newdiv);
+                    
+                    
+                    S(newdiv).border= 'solid 1px red';
+                    S(newdiv).width = '100px';
+                    S(newdiv).height = '100px';
+                    S(newdiv).color = 'white';
+                    newdiv.innerHTML = "i'm a new object inserted in the DOM";
+                    tmp = newdiv.offsetTop;
+                    */
+                   
+                   handle = setInterval(showtime, 1000);
+                   function showtime()
+                   {
+                       var date = new Date();
+                       document.body.innerHTML = date.toTimeString();
+                   }
+                   
+                   setTimout("clearInterval(handle)",10000);
+                   
+                   
+            </script>
+                
+        
+        
+    </body></html>
